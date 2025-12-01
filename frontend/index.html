@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="#">Remuse</a>
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">About Us</a>
+        </nav>
+        <div class="cta-container">
+            <a href="#" class="cta-button">Try Now</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="input-group">
+            <section class="upload-section">
+                <h2>Upload Resume</h2>
+                <div class="drop-zone" id="drop-zone">
+                    <div class="icon">📄</div>
+                    <p class="drop-zone-text">Drag & Drop your Resume here or <span class="browse-link">Browse</span>
+                    </p>
+                    <input type="file" id="resume-upload" name="resume_file" accept=".pdf,.txt" hidden>
+                    <p id="file-name" class="file-name"></p>
+                </div>
+            </section>
+
+            <section class="jd-section">
+                <h2>Job Description</h2>
+                <textarea id="jd-input" name="job_description"
+                    placeholder="Paste the Job Description here..."></textarea>
+            </section>
+        </div>
+    </main>
+    <div class="action-area">
+        <button id="check-btn" class="cta-button large">Check Resume</button>
+    </div>
+
+    <!-- Result Display Section (Hidden) -->
+    <section class="result-section hidden" id="result-section">
+        <h2>Analysis Result</h2>
+        <div class="result-content">
+            <div class="score-card">
+                <h3>Match Score</h3>
+                <div class="circular-progress" style="--progress: 0deg;">
+                    <span class="score-value">0%</span>
+                </div>
+            </div>
+            <div class="keywords-card">
+                <h3>Key Matching Keywords</h3>
+                <ul class="keywords-list">
+                    <li>Loading...</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='javascript.js') }}"></script>
+
+
+</body>
+
+</html>
