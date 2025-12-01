@@ -59,6 +59,25 @@ a {
     color: #000;
 }
 
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
 /* CTA Button */
 .cta-button {
     display: inline-block;
@@ -276,10 +295,59 @@ h2 {
 
 /* Responsive */
 @media (max-width: 768px) {
-
+    .main-header {
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+    
+    .nav-links.active {
+        transform: translateY(0);
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
     .input-group,
     .result-content {
         grid-template-columns: 1fr;
         flex-direction: column;
+    }
+    
+    .action-area {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button.large {
+        width: 100%;
+        max-width: 300px;
     }
 }

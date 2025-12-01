@@ -14,7 +14,12 @@
         <div class="logo">
             <a href="/">Remuse</a>
         </div>
-        <nav class="nav-links">
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-links" id="nav-links">
             <a href="/" class="active">Home</a>
             <a href="/about">About Us</a>
         </nav>
@@ -68,6 +73,25 @@
     </main>
 
     <script src="{{ url_for('static', filename='javascript.js') }}"></script>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 
 
 </body>
