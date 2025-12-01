@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-section",
+  "version": "1.0.0",
+  "description": "Portfolio section with GSAP and Locomotive Scroll",
+  "main": "index.js",
+  "scripts": {
+    "dev": "python app.py",
+    "install-deps": "npm install gsap locomotive-scroll"
+  },
+  "keywords": [
+    "gsap",
+    "locomotive-scroll",
+    "portfolio",
+    "animation"
+  ],
+  "author": "Muhammed Rashid",
+  "license": "MIT",
+  "dependencies": {
+    "gsap": "^3.12.0",
+    "locomotive-scroll": "^4.1.4"
+  }
+}

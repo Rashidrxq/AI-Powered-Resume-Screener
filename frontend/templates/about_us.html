@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Muhammed Rashid</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='aboutus.css') }}">
+</head>
+<body class="about-page">
+    <header class="main-header">
+        <div class="logo">
+            <a href="/">Remuse</a>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about" class="active">About Me</a>
+            <a href="/portfolio">Portfolio</a>
+        </nav>
+        <div class="cta-container">
+            <a href="/" class="cta-button">Try Now</a>
+        </div>
+    </header>
+
+    <main class="container about-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="developer-image fade-in">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='images/me.jpg') }}" alt="Muhammed Rashid">
+                    </div>
+                </div>
+                <div class="developer-info fade-in">
+                    <h1>Muhammed Rashid</h1>
+                    <h2 class="tagline">Software Engineer & AI/Web Developer</h2>
+                    <p class="intro-text">Hello! I'm a passionate software engineer and AI/web developer with a love for creativity, startups, and innovation. I specialize in building scalable web applications and AI-powered solutions that make a positive impact.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn primary">Hire Me</a>
+                        <a href="#" class="btn secondary">Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What I Do Section -->
+        <section class="what-i-do fade-in">
+            <h2>What I Do</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Full-stack development with modern frameworks, creating responsive and user-friendly web applications.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🤖</div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Building intelligent systems and NLP solutions that solve complex business problems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🚀</div>
+                    <h3>Innovation</h3>
+                    <p>Creating impactful solutions for real-world problems through creative thinking and cutting-edge technology.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey Timeline -->
+        <section class="journey-timeline fade-in">
+            <h2>My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Early Years</h3>
+                        <p>My journey in technology began several years ago with a passion for problem-solving and innovation.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Professional Growth</h3>
+                        <p>Worked on diverse projects ranging from job matching platforms like Remuse to advanced AI solutions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Continuous Learning</h3>
+                        <p>Believe in staying updated with the latest technologies to deliver cutting-edge solutions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Community Engagement</h3>
+                        <p>Active in exploring new technologies, contributing to open-source projects, and sharing knowledge.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section fade-in">
+            <h2>Tech Stack & Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-badges">
+                        <span class="badge">Python</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">Java</span>
+                        <span class="badge">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-badges">
+                        <span class="badge">Flask</span>
+                        <span class="badge">React</span>
+                        <span class="badge">TensorFlow</span>
+                        <span class="badge">Scikit-learn</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-badges">
+                        <span class="badge">Git</span>
+                        <span class="badge">Docker</span>
+                        <span class="badge">AWS</span>
+                        <span class="badge">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='aboutus.js') }}"></script>
+</body>
+</html>

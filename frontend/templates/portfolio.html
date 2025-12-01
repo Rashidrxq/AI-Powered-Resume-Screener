@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='portfolio.css') }}">
+    
+    <!-- Fallback for CSS if CDN fails -->
+    <style>
+        .no-js .preloader {
+            display: none;
+        }
+        .no-js .hero-section {
+            min-height: auto;
+            padding: 2rem 0;
+        }
+        .no-js .services-grid,
+        .no-js .skills-container {
+            display: block;
+        }
+        .no-js .service-card,
+        .no-js .skill-category {
+            margin-bottom: 2rem;
+        }
+        .no-js .timeline-wrapper {
+            height: auto;
+        }
+        .no-js .timeline-item {
+            position: relative;
+            opacity: 1;
+            margin-bottom: 2rem;
+        }
+        .no-js .badge {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body data-scroll-container class="no-js">
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Decorative Parallax Blobs -->
+    <div class="parallax-blob blob-1" data-scroll data-scroll-speed="-2"></div>
+    <div class="parallax-blob blob-2" data-scroll data-scroll-speed="1"></div>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="/">Remuse</a>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/portfolio" class="active">Portfolio</a>
+        </nav>
+        <div class="cta-container">
+            <a href="/" class="cta-button">Try Now</a>
+        </div>
+    </header>
+
+    <main data-scroll-section>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="photo-column" data-scroll data-scroll-speed="0.5">
+                        <div class="photo-card">
+                            <img src="/mnt/data/824d7e6a-3b8d-468e-a51e-95302fb278b1.png" alt="Developer Portrait" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h1 class="hero-title">Muhammed Rashid</h1>
+                        <p class="hero-tagline">Software Engineer & AI/Web Developer</p>
+                        <p class="hero-description">Passionate about creating innovative solutions through code. I specialize in building scalable web applications and AI-powered systems that make a positive impact.</p>
+                        <div class="hero-ctas">
+                            <a href="#" class="btn btn-primary" role="button" aria-label="Hire me for projects">Hire Me</a>
+                            <a href="#" class="btn btn-secondary" role="button" aria-label="Download my resume">Download CV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What I Do Section -->
+        <section class="what-i-do" id="whatido" data-scroll-section>
+            <div class="container">
+                <h2 class="section-title">What I Do</h2>
+                <div class="services-grid">
+                    <div class="service-card" data-service-card>
+                        <div class="service-icon">💻</div>
+                        <h3>Web Development</h3>
+                        <p>Full-stack development with modern frameworks, creating responsive and user-friendly web applications.</p>
+                    </div>
+                    <div class="service-card" data-service-card>
+                        <div class="service-icon">🤖</div>
+                        <h3>AI & Machine Learning</h3>
+                        <p>Building intelligent systems and NLP solutions that solve complex business problems.</p>
+                    </div>
+                    <div class="service-card" data-service-card>
+                        <div class="service-icon">🚀</div>
+                        <h3>Innovation</h3>
+                        <p>Creating impactful solutions for real-world problems through creative thinking and cutting-edge technology.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section" id="skills" data-scroll-section>
+            <div class="container">
+                <h2 class="section-title">Tech Stack & Expertise</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <div class="skill-badges" data-skill-badges>
+                            <span class="badge" data-badge>Python</span>
+                            <span class="badge" data-badge>JavaScript</span>
+                            <span class="badge" data-badge>Java</span>
+                            <span class="badge" data-badge>SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frameworks & Libraries</h3>
+                        <div class="skill-badges" data-skill-badges>
+                            <span class="badge" data-badge>Flask</span>
+                            <span class="badge" data-badge>React</span>
+                            <span class="badge" data-badge>TensorFlow</span>
+                            <span class="badge" data-badge>Scikit-learn</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Platforms</h3>
+                        <div class="skill-badges" data-skill-badges>
+                            <span class="badge" data-badge>Git</span>
+                            <span class="badge" data-badge>Docker</span>
+                            <span class="badge" data-badge>AWS</span>
+                            <span class="badge" data-badge>Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey Timeline -->
+        <section class="journey-timeline" id="journey" data-scroll-section>
+            <div class="container">
+                <h2 class="section-title">My Journey</h2>
+                <div class="timeline-wrapper" data-scroll data-scroll-call="initTimeline">
+                    <div class="timeline-progress">
+                        <div class="timeline-progress-bar"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-item" data-timeline-item>
+                            <div class="timeline-year">2018</div>
+                            <div class="timeline-panel">
+                                <h3>Early Years</h3>
+                                <p>My journey in technology began with a passion for problem-solving and innovation.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-timeline-item>
+                            <div class="timeline-year">2020</div>
+                            <div class="timeline-panel">
+                                <h3>Professional Growth</h3>
+                                <p>Worked on diverse projects ranging from job matching platforms to advanced AI solutions.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-timeline-item>
+                            <div class="timeline-year">2022</div>
+                            <div class="timeline-panel">
+                                <h3>Continuous Learning</h3>
+                                <p>Staying updated with the latest technologies to deliver cutting-edge solutions.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-timeline-item>
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-panel">
+                                <h3>Community Engagement</h3>
+                                <p>Exploring new technologies, contributing to open-source projects, and sharing knowledge.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <!-- For CDN usage (default): -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.js"></script>
+    
+    <!-- For npm usage (uncomment and comment out CDN links above): -->
+    <!--
+    <script type="module">
+        import gsap from 'gsap';
+        import ScrollTrigger from 'gsap/ScrollTrigger';
+        import LocomotiveScroll from 'locomotive-scroll';
+        
+        // Register plugins
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Export to global scope for compatibility with existing code
+        window.gsap = gsap;
+        window.ScrollTrigger = ScrollTrigger;
+        window.LocomotiveScroll = LocomotiveScroll;
+    </script>
+    -->
+    
+    <script>
+        // Remove no-js class when JS is loaded
+        document.body.classList.remove('no-js');
+    </script>
+    
+    <script src="{{ url_for('static', filename='portfolio.js') }}"></script>
+</body>
+</html>

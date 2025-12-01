@@ -59,6 +59,16 @@ def home():
     return render_template('index.html')
 
 
+@app.route('/about')
+def about():
+    return render_template('about_us.html')
+
+
+@app.route('/portfolio')
+def portfolio():
+    return render_template('portfolio.html')
+
+
 @app.route('/process', methods=['POST'])
 def process_resume():
     job_description = request.form.get('job_description')

@@ -1,100 +1,47 @@
-# AI-Powered Resume Screener
+# Remuse
+AI-powered resume analyzer.
 
-An intelligent resume screening application that uses AI to match resumes with job descriptions and provide a compatibility score.
-
-## Features
-
-- **Resume Upload**: Drag-and-drop interface for PDF and TXT resume files
-- **Job Description Input**: Easy text area for pasting job requirements
-- **AI-Powered Matching**: Uses TF-IDF and cosine similarity to calculate match scores
-- **Keyword Extraction**: Identifies key matching keywords between resume and JD
-- **Interactive UI**: Clean, modern interface with real-time results
-- **Clear Functionality**: Quick reset button to start fresh
-
-## Tech Stack
-
-### Frontend
-- HTML5
-- CSS3 (Custom styling with Flexbox/Grid)
-- Vanilla JavaScript
-
-### Backend
-- Python 3.x
-- Flask (Web framework)
-- pdfminer.six (PDF text extraction)
-- scikit-learn (TF-IDF vectorization and similarity)
-- NLTK (Natural language processing)
+This is a web application that uses natural language processing to analyze resumes.
+It can analyze resumes and provide feedback on how to improve them.
+The application is built using Python and the Flask web framework.
+It uses the OpenAI GPT-3 API to generate text based on the input it receives.
+The application also uses the PyMuPDF library to extract text from PDF files.
 
 ## Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Rashidrxq/AI-Powered-Resume-Screener.git
-   cd AI-Powered-Resume-Screener
-   ```
-
-2. **Create a virtual environment**
-   ```bash
-   python -m venv .venv
-   .venv\Scripts\activate  # On Windows
-   # source .venv/bin/activate  # On macOS/Linux
-   ```
-
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+To install the required packages, run the following command in the terminal:
+```bash
+pip install -r requirements.txt
+```
+## Running the Application
+To run the application, execute the following command in the terminal:
+```bash
+python app.py
+```
+## Accessing the Application
+Once the application is running, you can access it by opening a web browser and navigating to [http://localhost:5000](http://localhost:5000).
+## Requirements
+- Python 3.7 or higher
+- Flask 1.1.2 or higher
+- OpenAI GPT-3 API key
+- PyMuPDF 1.18.4 or higher
+- OpenAI GPT-3 API key
+- Python 3.7 or higher
+- Flask 1.1.2 or higher
+- PyMuPDF 1.18.4 or higher  
+- OpenAI GPT-3 API key
 
 ## Usage
-
-1. **Start the Flask server**
-   ```bash
-   cd frontend
-   python app.py
-   ```
-
-2. **Open your browser**
-   Navigate to `http://127.0.0.1:5000`
-
-3. **Use the application**
-   - Upload your resume (PDF or TXT)
-   - Paste the job description
-   - Click "Check Resume" to see the match score
-   - View matching keywords
-   - Use "Clear" to reset and try another resume
-
-## Project Structure
-
-```
-remuse/
-├── frontend/
-│   ├── app.py              # Flask backend
-│   ├── static/
-│   │   ├── style.css       # Styling
-│   │   └── javascript.js   # Frontend logic
-│   └── templates/
-│       └── index.html      # Main page
-├── requirements.txt        # Python dependencies
-└── README.md
-```
-
-## How It Works
-
-1. **Text Extraction**: Extracts text from uploaded PDF resumes
-2. **Preprocessing**: Cleans and tokenizes both resume and job description
-3. **Vectorization**: Converts text to TF-IDF vectors
-4. **Similarity Calculation**: Computes cosine similarity between vectors
-5. **Keyword Matching**: Identifies common significant keywords
-6. **Results Display**: Shows match percentage and keywords with animated UI
+To use the application, simply upload a resume in PDF format by clicking on the "Choose File" button on the homepage.
+Once the file is uploaded, click on the "Analyze Resume" button to generate a report.
+The report will be displayed on a new page, showing feedback on how to improve the resume.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contributing
+Contributions are welcome! Please read the [CONTRIBUTING](CONTRIBUTING.md) file for more information on how to contribute to this project.
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## Acknowledgments
+- [Flask](https://flask.palletsprojects.com/)
+- [OpenAI](https://openai.com/)
+- [PyMuPDF](https://pymupdf.readthedocs.io/)
 
-## License
-
-This project is open source and available under the MIT License.
-
-## Author
-
-Rashid - [GitHub](https://github.com/Rashidrxq)
