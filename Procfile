@@ -1,1 +1,1 @@
-web: cd frontend && gunicorn app:app
+web: gunicorn --chdir frontend app:app
