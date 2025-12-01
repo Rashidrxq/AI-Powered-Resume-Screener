@@ -11,6 +11,12 @@ An intelligent resume screening application that uses AI to match resumes with j
 - **Interactive UI**: Clean, modern interface with real-time results
 - **Clear Functionality**: Quick reset button to start fresh
 
+## Screenshots
+<img width="1868" height="945" alt="Screenshot 2025-12-01 193144" src="https://github.com/user-attachments/assets/1408f218-2855-467b-9177-1ef158884942" />
+<img width="883" height="784" alt="Screenshot 2025-12-01 193311" src="https://github.com/user-attachments/assets/96f1fd00-7a00-44df-ab68-ac2e01bf5331" />
+<img width="1866" height="886" alt="Screenshot 2025-12-01 194417" src="https://github.com/user-attachments/assets/7f3e5614-62a3-4293-b4ac-41f2098f5d00" />
+
+
 ## Tech Stack
 
 ### Frontend
