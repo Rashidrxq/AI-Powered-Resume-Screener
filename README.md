@@ -1,11 +1,36 @@
 # Remuse
 AI-powered resume analyzer.
 
-This is a web application that uses natural language processing to analyze resumes.
-It can analyze resumes and provide feedback on how to improve them.
-The application is built using Python and the Flask web framework.
-It uses the OpenAI GPT-3 API to generate text based on the input it receives.
-The application also uses the PyMuPDF library to extract text from PDF files.
+An intelligent resume screening application that uses AI to match resumes with job descriptions and provide a compatibility score.
+
+## Features
+
+- **Resume Upload**: Drag-and-drop interface for PDF and TXT resume files
+- **Job Description Input**: Easy text area for pasting job requirements
+- **AI-Powered Matching**: Uses TF-IDF and cosine similarity to calculate match scores
+- **Keyword Extraction**: Identifies key matching keywords between resume and JD
+- **Interactive UI**: Clean, modern interface with real-time results
+- **Clear Functionality**: Quick reset button to start fresh
+
+## Screenshots
+<img width="1868" height="945" alt="Screenshot 2025-12-01 193144" src="https://github.com/user-attachments/assets/1408f218-2855-467b-9177-1ef158884942" />
+<img width="883" height="784" alt="Screenshot 2025-12-01 193311" src="https://github.com/user-attachments/assets/96f1fd00-7a00-44df-ab68-ac2e01bf5331" />
+<img width="1866" height="886" alt="Screenshot 2025-12-01 194417" src="https://github.com/user-attachments/assets/7f3e5614-62a3-4293-b4ac-41f2098f5d00" />
+
+
+## Tech Stack
+
+### Frontend
+- HTML5
+- CSS3 (Custom styling with Flexbox/Grid)
+- Vanilla JavaScript
+
+### Backend
+- Python 3.x
+- Flask (Web framework)
+- pdfminer.six (PDF text extraction)
+- scikit-learn (TF-IDF vectorization and similarity)
+- NLTK (Natural language processing)
 
 ## Installation
 To install the required packages, run the following command in the terminal:
@@ -22,13 +47,9 @@ Once the application is running, you can access it by opening a web browser and 
 ## Requirements
 - Python 3.7 or higher
 - Flask 1.1.2 or higher
-- OpenAI GPT-3 API key
-- PyMuPDF 1.18.4 or higher
-- OpenAI GPT-3 API key
-- Python 3.7 or higher
-- Flask 1.1.2 or higher
-- PyMuPDF 1.18.4 or higher  
-- OpenAI GPT-3 API key
+- pdfminer.six
+- scikit-learn
+- NLTK
 
 ## Usage
 To use the application, simply upload a resume in PDF format by clicking on the "Choose File" button on the homepage.
@@ -42,6 +63,6 @@ Contributions are welcome! Please read the [CONTRIBUTING](CONTRIBUTING.md) file 
 
 ## Acknowledgments
 - [Flask](https://flask.palletsprojects.com/)
-- [OpenAI](https://openai.com/)
-- [PyMuPDF](https://pymupdf.readthedocs.io/)
-
+- [pdfminer.six](https://github.com/pdfminer/pdfminer.six)
+- [scikit-learn](https://scikit-learn.org/)
+- [NLTK](https://www.nltk.org/)
