@@ -66,3 +66,7 @@ Contributions are welcome! Please read the [CONTRIBUTING](CONTRIBUTING.md) file 
 - [pdfminer.six](https://github.com/pdfminer/pdfminer.six)
 - [scikit-learn](https://scikit-learn.org/)
 - [NLTK](https://www.nltk.org/)
+
+## Recent Updates
+- Added responsive header with mobile menu toggle
+- Enhanced mobile user experience
